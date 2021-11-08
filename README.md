@@ -1,2 +1,8 @@
 # Lunar-Dust-Motion-Simulation
-Created for USI Physics Senior Thesis under guidance of advisor Dr. Jenna Kloosterman
+Created by Austin Mitchell for USI Physics Senior Thesis under guidance of advisor Dr. Jenna Kloosterman.
+
+Solar power presents a possible method of sustained power generation on the Moon for lunar surface operations, but because of their large surface areas solar arrays are susceptible to coverage by electrically charged lunar dust thereby reducing light transmission. To maintain maximum power generation capabilities, dust-covered solar panels will need to be cleaned regularly. Because the dust particles have a net electric charge and are relatively small in size, it is possible to use electrostatic forces to transport dust from the panel surface. 
+
+A circuit design based on work done in the 1970s, and recently implemented (independently) by C.I. Calle of NASA and Hiroyuki Kawamoto of Waseda University, does exactly that. This design uses a multiphase voltage with parallel electrodes across the panel surface (See 'circuit_diagram.png). With the right frequency, magnitude, and phase shift between voltages, this circuit produces a travelling wave perpendicular to the electrodes in the electric field above the panel. This travelling wave can then pick up the electrically charged dust and ferry it across the panel surface.
+
+'motion_simulation.py' will initialize a specified number of dust particles, randomly distributed over the solar panel surface. It then simulates the motion of the particles under the effect of the circuit's electric field, and writes the coordinates of each particle to a .csv file. These coordinates can then be animated using the vpython package with 'animate_coordinates.py'. Because vpython has no inbuilt method for saving video, screen capture software was used to record the video seen in 'animation300particles750.0V500Hz1200s.webm'.
